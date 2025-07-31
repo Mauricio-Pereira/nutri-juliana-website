@@ -59,7 +59,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 text-shadow font-light">
             Nutrindo futuras gerações com amor 💕
           </p>
-          <Button 
+          {/* <Button 
             asChild 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 rounded-full"
@@ -68,7 +68,7 @@ const Index = () => {
               Agendar Consulta
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
-          </Button>
+          </Button> */}
         </div>
       </section>
 
@@ -166,7 +166,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Pronta para Transformar sua Alimentação?
@@ -186,7 +186,7 @@ const Index = () => {
             </a>
           </Button>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

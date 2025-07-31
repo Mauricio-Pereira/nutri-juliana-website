@@ -66,12 +66,12 @@ const Sobre = () => {
                 alimentação consciente e saudável, especializada no cuidado integral 
                 da saúde da mulher e da família.
               </p>
-              <Button asChild size="lg">
+              {/* <Button asChild size="lg">
                 <a href="/contato">
                   Agendar Consulta
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
-              </Button>
+              </Button> */}
             </div>
             <div>
               <img
@@ -178,7 +178,7 @@ const Sobre = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Vamos Construir Juntas Sua Jornada de Saúde?
@@ -199,7 +199,7 @@ const Sobre = () => {
             </a>
           </Button>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

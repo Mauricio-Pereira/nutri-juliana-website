@@ -1,50 +1,57 @@
-import Layout from '@/components/Layout';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Instagram, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
-import consultationImage from '';
+import Layout from "@/components/Layout";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Phone,
+  Instagram,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
+import consultationImage from "";
 
 const Contato = () => {
   const contactInfo = [
-    {
-      icon: Phone,
-      title: 'Telefone/WhatsApp',
-      info: '+55 12 99784-8513',
-      link: 'https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.',
-      description: 'Atendimento via WhatsApp',
-    },
+    // {
+    //   icon: Phone,
+    //   title: 'Telefone/WhatsApp',
+    //   info: '+55 12 99784-8513',
+    //   link: 'https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.',
+    //   description: 'Atendimento via WhatsApp',
+    // },
     {
       icon: Instagram,
-      title: 'Instagram',
-      info: '@julianarabelonutri',
-      link: 'https://www.instagram.com/julianarabelonutri/',
-      description: 'Dicas e conteúdos diários',
+      title: "Instagram",
+      info: "@julianarabelonutri",
+      link: "https://www.instagram.com/julianarabelonutri/",
+      description: "Dicas e conteúdos semanais",
     },
     {
       icon: Mail,
-      title: 'E-mail',
-      info: 'nutricionistajulianarabelo@gmail.com',
-      link: 'mailto:nutricionistajulianarabelo@gmail.com',
-      description: 'Para dúvidas gerais',
+      title: "E-mail",
+      info: "nutricionistajulianarabelo@gmail.com",
+      link: "mailto:nutricionistajulianarabelo@gmail.com",
+      description: "Para dúvidas gerais",
     },
-    {
-      icon: MapPin,
-      title: 'Localização',
-      info: 'Atendimento Presencial e Online',
-      link: '#',
-      description: 'Flexibilidade para você',
-    },
+    // {
+    //   icon: MapPin,
+    //   title: 'Localização',
+    //   info: 'Atendimento Presencial e Online',
+    //   link: '#',
+    //   description: 'Flexibilidade para você',
+    // },
   ];
 
   const schedule = [
-    { day: 'Segunda a Sexta', hours: '10:00 - 20:00' },
-    { day: 'Sábado e Domingo', hours: 'Fechado' },
+    { day: "Segunda a Sexta", hours: "10:00 - 20:00" },
+    { day: "Sábado e Domingo", hours: "Fechado" },
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-32 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(img/consultation.jpg)` }}
       >
@@ -54,15 +61,16 @@ const Contato = () => {
             Vamos Conversar?
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Estou aqui para te ajudar a transformar sua relação com a alimentação. 
-            Entre em contato e vamos iniciar sua jornada de saúde juntas!
+            Estou aqui para te ajudar a transformar sua relação com a
+            alimentação. Entre em contato e vamos iniciar sua jornada de saúde
+            juntas!
           </p>
         </div>
       </section>
 
       {/* Principais Formas de Contato */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold mb-4 text-foreground">
               Como me Encontrar
@@ -71,42 +79,48 @@ const Contato = () => {
               Escolha a forma mais conveniente para entrar em contato
             </p>
           </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {contactInfo.map((contact, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-lg transition-all duration-300"
+                >
+                  <CardContent className="p-6 text-center h-full flex flex-col">
+                    <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto mb-4">
+                      <contact.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold mb-2 text-foreground">
+                      {contact.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-2">
+                      {contact.description}
+                    </p>
+                    <p className="font-medium text-foreground mb-4 flex-grow">
+                      {contact.info}
+                    </p>
+                    {contact.link !== "#" && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      >
+                        <a
+                          href={contact.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Acessar
+                        </a>
+                      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {contactInfo.map((contact, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6 text-center h-full flex flex-col">
-                  <div className="p-4 bg-primary/10 rounded-full w-fit mx-auto mb-4">
-                    <contact.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-serif text-xl font-semibold mb-2 text-foreground">
-                    {contact.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-2">
-                    {contact.description}
-                  </p>
-                  <p className="font-medium text-foreground mb-4 flex-grow">
-                    {contact.info}
-                  </p>
-                  {contact.link !== '#' && (
-                    <Button 
-                      asChild 
-                      variant="outline" 
-                      size="sm"
-                      className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                    >
-                      <a href={contact.link} target="_blank" rel="noopener noreferrer">
-                        Acessar
-                      </a>
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* WhatsApp Destaque */}
-          <div className="text-center">
+            {/* WhatsApp Destaque */}
+            {/* <div className="text-center">
             <Card className="max-w-2xl mx-auto bg-primary/5 border-primary/20">
               <CardContent className="p-8">
                 <h3 className="font-serif text-2xl font-bold mb-4 text-foreground">
@@ -132,12 +146,12 @@ const Contato = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div> */}
           </div>
-        </div>
       </section>
 
       {/* Horários de Atendimento */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-8 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -161,8 +175,12 @@ const Contato = () => {
                   <div className="space-y-3">
                     {schedule.map((item, index) => (
                       <div key={index} className="flex justify-between">
-                        <span className="text-muted-foreground">{item.day}</span>
-                        <span className="font-medium text-foreground">{item.hours}</span>
+                        <span className="text-muted-foreground">
+                          {item.day}
+                        </span>
+                        <span className="font-medium text-foreground">
+                          {item.hours}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -185,7 +203,9 @@ const Contato = () => {
                       </p>
                     </div> */}
                     <div>
-                      <h4 className="font-medium text-foreground mb-1">Online</h4>
+                      <h4 className="font-medium text-foreground mb-1">
+                        Online
+                      </h4>
                       <p className="text-muted-foreground text-sm">
                         Consultas via videochamada para sua comodidade
                       </p>
@@ -225,7 +245,8 @@ const Contato = () => {
                   Plano Personalizado
                 </h3>
                 <p className="text-muted-foreground">
-                  Desenvolvimento de um plano alimentar adaptado ao seu estilo de vida
+                  Desenvolvimento de um plano alimentar adaptado ao seu estilo
+                  de vida
                 </p>
               </div>
               <div className="text-center">
@@ -245,18 +266,18 @@ const Contato = () => {
       </section>
 
       {/* Call to Action Final */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* <section className="py-8 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Pronta para Começar?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Não perca mais tempo. Sua jornada para uma vida mais saudável 
-            pode começar hoje mesmo!
+            Não perca mais tempo. Sua jornada para uma vida mais saudável pode
+            começar hoje mesmo!
           </p>
-          <Button 
-            asChild 
-            size="lg" 
+          <Button
+            asChild
+            size="lg"
             variant="secondary"
             className="text-lg px-8 py-6 rounded-full"
           >
@@ -266,7 +287,7 @@ const Contato = () => {
             </a>
           </Button>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

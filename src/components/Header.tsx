@@ -11,7 +11,7 @@ const Header = () => {
     { name: 'Início', href: '/' },
     { name: 'Juliana Rabelo', href: '/sobre' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pacotes', href: '/pacotes' },
+    // { name: 'Pacotes', href: '/pacotes' },
     { name: 'Parcerias', href: '/parcerias' },
     { name: 'Contato', href: '/contato' },
   ];
@@ -64,7 +64,7 @@ const Header = () => {
           </nav>
 
           {/* WhatsApp Button - Sempre à direita */}
-          <div className="hidden md:block flex-shrink-0">
+          {/* <div className="hidden md:block flex-shrink-0">
             <Button asChild className="bg-primary hover:bg-primary/90">
               <a
                 href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta."
@@ -74,7 +74,7 @@ const Header = () => {
                 Agendar Consulta
               </a>
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile menu button - À direita */}
           <div className="md:hidden flex-shrink-0">
@@ -109,7 +109,7 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
+              {/* <div className="pt-4">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <a
                     href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta."
@@ -119,7 +119,7 @@ const Header = () => {
                     Agendar Consulta
                   </a>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}
