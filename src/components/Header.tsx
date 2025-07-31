@@ -39,7 +39,7 @@ const Header = () => {
           {/* Logo - Sempre à esquerda */}
           <div className="flex-shrink-0 ml-0 pl-0">
             <Link to="/" onClick={handleLinkClick} className="flex items-center">
-              <img src={'public/img/logo-3cores-sem-fundo.png'} alt="Juliana Rabelo" className="h-20" />
+              <img src={'/img/logo-3cores-sem-fundo.png'} alt="Juliana Rabelo" className="h-20" />
             </Link>
           </div>
 

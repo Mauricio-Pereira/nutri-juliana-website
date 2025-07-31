@@ -75,7 +75,7 @@ const Sobre = () => {
             </div>
             <div>
               <img
-                src={'public/img/profile-photo-4.png'}
+                src={'/img/profile-photo-4.png'}
                 alt="Juliana Rabelo - Nutricionista"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
