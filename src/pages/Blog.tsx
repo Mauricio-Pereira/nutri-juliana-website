@@ -13,7 +13,7 @@ const Blog = () => {
             saúde da mulher e alimentação saudável.
           </p>
           <p className="text-muted-foreground">
-            Enquanto isso, siga nosso Instagram @julianarabelo_nutri para 
+            Enquanto isso, siga nosso Instagram @julianarabelonutri para 
             conteúdos diários!
           </p>
         </div>

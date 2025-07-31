@@ -2,34 +2,45 @@ import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Baby, Leaf, Scale, ArrowRight } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
-import julianaProfile from '@/assets/juliana-profile.jpg';
+import heroBackground from '@/assets/background-home.png';
 
 const Index = () => {
   const specialties = [
     {
+      id: 'saude-mulher',
       icon: Heart,
       title: 'Saúde da Mulher',
-      description: 'Foco em fertilidade, saúde reprodutiva, ciclos menstruais, endometriose, SOP',
+      description: 'Cuidar da saúde da mulher envolve compreender as nuances e particularidades de cada fase da vida.',
+      fullDescription: 'Foco especialmente em áreas como fertilidade, saúde reprodutiva, ciclos menstruais, endometriose e síndrome do ovário policístico (SOP). Se você está tentando engravidar, lidando com desafios hormonais ou simplesmente buscando um equilíbrio menstrual, estou aqui para ajudar.',
       color: 'text-pink-600',
+      bgImage: '/img/saude-da-mulher.png',
     },
     {
+      id: 'materno-infantil',
       icon: Baby,
       title: 'Materno-Infantil',
-      description: 'Pré-concepção ao pós-parto, amamentação, introdução alimentar',
+      description: 'A nutrição durante a gestação e a infância é crucial para um desenvolvimento saudável.',
+      fullDescription: 'Acompanho desde a pré-concepção, gestação, pós-parto e amamentação, oferecendo orientações que promovem uma alimentação balanceada, com foco em nutrientes essenciais. Para os pequenos, trabalho na introdução alimentar e na formação de hábitos saudáveis, respeitando cada fase de desenvolvimento e necessidades individuais.',
       color: 'text-blue-600',
+      bgImage: '/img/materno-infantil.png',
     },
     {
+      id: 'vegetarianismo',
       icon: Leaf,
       title: 'Vegetarianismo',
-      description: 'Orientação em alimentação plant-based garantindo perfil nutricional completo',
+      description: 'Seja por questões éticas, ambientais ou de saúde, a alimentação vegetariana é uma escolha cada vez mais comum.',
+      fullDescription: 'Ofereço orientação para quem deseja adotar ou já segue uma dieta vegetariana, garantindo que todos os nutrientes essenciais sejam incluídos na alimentação. Exploramos juntos opções saborosas e nutritivas, mostrando que é possível ter uma alimentação completa e cheia de sabores.',
       color: 'text-green-600',
+      bgImage: '/img/vegetarianismo.png',
     },
     {
+      id: 'emagrecimento',
       icon: Scale,
       title: 'Emagrecimento',
-      description: 'Controle de peso sustentável, sem restrições extremas',
+      description: 'O processo de emagrecimento vai além de perder peso. É sobre conquistar saúde, bem-estar e autoconfiança.',
+      fullDescription: 'Trabalho com planos alimentares individualizados, que respeitam suas preferências e rotina, sem restrições extremas. Meu objetivo é promover uma relação saudável com a comida, ajudando a entender sinais de fome e saciedade, e incentivando a prática de hábitos sustentáveis.',
       color: 'text-purple-600',
+      bgImage: '/img/emagrecimento.png',
     },
   ];
 
@@ -62,7 +73,7 @@ const Index = () => {
       </section>
 
       {/* Sobre Mim Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -80,7 +91,7 @@ const Index = () => {
                   deve ser prazerosa, sustentável e adaptada ao estilo de vida de cada pessoa.
                 </p>
                 <p>
-                  Com especialização em <strong className="text-foreground">saúde da mulher</strong>, 
+                  Com foco em <strong className="text-foreground">saúde da mulher</strong>, 
                   <strong className="text-foreground"> nutrição materno-infantil</strong>, 
                   <strong className="text-foreground"> vegetarianismo</strong> e 
                   <strong className="text-foreground"> emagrecimento saudável</strong>, 
@@ -98,7 +109,7 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src={julianaProfile}
+                src={'public/img/profile-photo-1.jpeg'}
                 alt="Juliana Rabelo - Nutricionista"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -108,39 +119,54 @@ const Index = () => {
       </section>
 
       {/* Áreas de Especialização */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold mb-4 text-foreground">
-              Áreas de Especialização
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Atendimento especializado e personalizado para cada fase da sua vida
-            </p>
-          </div>
+      <section className="pb-9 bg-muted/30">
+        <div className="text-center py-12 px-4">
+          <h2 className="font-serif text-4xl font-bold mb-4 text-foreground">
+            Áreas de Foco
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Atendimento especializado e personalizado para cada fase da sua vida
+          </p>
+        </div>
+        
+        {/* Container das áreas - Horizontal em desktop */}
+        <div className="flex flex-col lg:flex-row p-0 m-0">
+          {specialties.map((specialty) => (
+            <div 
+              key={specialty.id}
+              className="group relative w-full h-96 lg:h-[29rem] text-white flex items-center justify-center text-center overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+            >
+              {/* Background Image com overlay */}
+              <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-105 z-0"
+          style={{ backgroundImage: `url(${specialty.bgImage})` }}
+              />
+              
+              {/* Overlay escuro */}
+              <div className="absolute inset-0 bg-black/50 z-0 transition-colors duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              
+              {/* Overlay adicional que muda no hover */}
+              <div className="absolute inset-0 bg-transparent group-hover:bg-black/40 transition-colors duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] z-0" />
+              
+              {/* Conteúdo */}
+              <div className="relative z-10 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:mt-[40%] group-hover:-translate-y-20">
+          {/* Título sempre visível */}
+          <h3 className="font-serif text-2xl font-bold mb-4 z-10" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+            {specialty.title}
+          </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {specialties.map((specialty, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                <CardContent className="p-6 text-center h-full flex flex-col">
-                  <div className={`inline-flex p-4 rounded-full bg-background mb-4 ${specialty.color}`}>
-                    <specialty.icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
-                    {specialty.title}
-                  </h3>
-                  <p className="text-muted-foreground flex-grow">
-                    {specialty.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          {/* Descrição que aparece no hover */}
+          <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-100 group-hover:max-h-96 text-center mx-5 text-sm lg:text-base leading-relaxed">
+            {specialty.fullDescription}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Pronta para Transformar sua Alimentação?

@@ -9,20 +9,20 @@ const Sobre = () => {
     {
       icon: GraduationCap,
       title: 'Graduação em Nutrição',
-      description: 'Formada em Nutrição pela Universidade renomada',
-      year: '2018',
+      description: 'Formada em Nutrição pela UNIP',
+      year: '2023',
     },
     {
       icon: Award,
-      title: 'Especialização em Nutrição Materno-Infantil',
-      description: 'Pós-graduação focada no atendimento de gestantes e crianças',
-      year: '2020',
+      title: 'Nutricionista na Clinica Seven',
+      description: 'Nutricionista responsável por atendimentos clínicos com foco em emagrecimento e saúde da mulher',
+      year: '2024-Atualmente',
     },
     {
       icon: Users,
       title: 'Experiência Clínica',
-      description: 'Mais de 5 anos de experiência em atendimento nutricional',
-      year: '2019-2024',
+      description: 'Mais de 3000 atendimentos realizados',
+      year: '2023-Atualmente',
     },
     {
       icon: Heart,
@@ -54,7 +54,7 @@ const Sobre = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10">
+      <section className="py-16 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -75,7 +75,7 @@ const Sobre = () => {
             </div>
             <div>
               <img
-                src={julianaProfile}
+                src={'public/img/profile-photo-4.png'}
                 alt="Juliana Rabelo - Nutricionista"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -85,7 +85,7 @@ const Sobre = () => {
       </section>
 
       {/* Minha História */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-4xl font-bold mb-8 text-center text-foreground">
@@ -104,8 +104,7 @@ const Sobre = () => {
                 requerem um cuidado especial e uma abordagem mais humanizada.
               </p>
               <p>
-                Ao longo dos anos, desenvolvi uma metodologia que combina evidência científica 
-                com escuta ativa e acolhimento. Acredito que cada pessoa tem uma história única 
+                Acredito que cada pessoa tem uma história única 
                 com a comida, e meu papel é ajudar a construir uma relação mais saudável e 
                 prazerosa com a alimentação.
               </p>
@@ -123,7 +122,7 @@ const Sobre = () => {
       </section>
 
       {/* Qualificações */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold mb-12 text-center text-foreground">
             Formação e Experiência
@@ -158,7 +157,7 @@ const Sobre = () => {
       </section>
 
       {/* Valores */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold mb-12 text-center text-foreground">
             Meus Valores
@@ -179,7 +178,7 @@ const Sobre = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Vamos Construir Juntas Sua Jornada de Saúde?

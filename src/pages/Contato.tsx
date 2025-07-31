@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Instagram, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
-import consultationImage from '@/assets/consultation.jpg';
+import consultationImage from '';
 
 const Contato = () => {
   const contactInfo = [
@@ -16,15 +16,15 @@ const Contato = () => {
     {
       icon: Instagram,
       title: 'Instagram',
-      info: '@julianarabelo_nutri',
-      link: 'https://www.instagram.com/julianarabelo_nutri/',
+      info: '@julianarabelonutri',
+      link: 'https://www.instagram.com/julianarabelonutri/',
       description: 'Dicas e conteúdos diários',
     },
     {
       icon: Mail,
       title: 'E-mail',
-      info: 'contato@julianarabelo.com',
-      link: 'mailto:contato@julianarabelo.com',
+      info: 'nutricionistajulianarabelo@gmail.com',
+      link: 'mailto:nutricionistajulianarabelo@gmail.com',
       description: 'Para dúvidas gerais',
     },
     {
@@ -37,9 +37,8 @@ const Contato = () => {
   ];
 
   const schedule = [
-    { day: 'Segunda a Sexta', hours: '08:00 - 18:00' },
-    { day: 'Sábado', hours: '08:00 - 12:00' },
-    { day: 'Domingo', hours: 'Fechado' },
+    { day: 'Segunda a Sexta', hours: '10:00 - 20:00' },
+    { day: 'Sábado e Domingo', hours: 'Fechado' },
   ];
 
   return (
@@ -47,7 +46,7 @@ const Contato = () => {
       {/* Hero Section */}
       <section 
         className="relative py-32 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${consultationImage})` }}
+        style={{ backgroundImage: `url(img/consultation.jpg)` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -62,7 +61,7 @@ const Contato = () => {
       </section>
 
       {/* Principais Formas de Contato */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold mb-4 text-foreground">
@@ -138,7 +137,7 @@ const Contato = () => {
       </section>
 
       {/* Horários de Atendimento */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -146,7 +145,7 @@ const Contato = () => {
                 Horários de Atendimento
               </h2>
               <p className="text-xl text-muted-foreground">
-                Consultas presenciais e online disponíveis
+                Consultas online disponíveis atualmente pela Clínica Seven
               </p>
             </div>
 
@@ -179,22 +178,16 @@ const Contato = () => {
                     </h3>
                   </div>
                   <div className="space-y-4">
-                    <div>
+                    {/* <div>
                       <h4 className="font-medium text-foreground mb-1">Presencial</h4>
                       <p className="text-muted-foreground text-sm">
                         Atendimento no consultório com toda infraestrutura necessária
                       </p>
-                    </div>
+                    </div> */}
                     <div>
                       <h4 className="font-medium text-foreground mb-1">Online</h4>
                       <p className="text-muted-foreground text-sm">
                         Consultas via videochamada para sua comodidade
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-foreground mb-1">Domiciliar</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Atendimento em casa para casos específicos
                       </p>
                     </div>
                   </div>
@@ -206,7 +199,7 @@ const Contato = () => {
       </section>
 
       {/* Sobre o Atendimento */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl font-bold mb-8 text-foreground">
@@ -252,7 +245,7 @@ const Contato = () => {
       </section>
 
       {/* Call to Action Final */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Pronta para Começar?
