@@ -58,14 +58,14 @@ const Sobre = () => {
         className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(img/background-home.png)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-white/85"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="font-serif text-5xl font-bold mb-6 text-white">
+              <h1 className="font-serif text-5xl font-bold mb-6 text-foreground">
                 Conheça Juliana Rabelo
               </h1>
-              <p className="text-xl text-white/90 leading-relaxed mb-8">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Uma profissional dedicada à transformação de vidas através da 
                 alimentação consciente e saudável, especializada no cuidado integral 
                 da saúde da mulher e da família.
@@ -78,11 +78,11 @@ const Sobre = () => {
               </Button> */}
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent rounded-2xl"></div>
               <img
-                src={'/img/profile-photo-4.png'}
+                src={'/img/profile-photo-6.jpeg'}
                 alt="Juliana Rabelo - Nutricionista"
-                className="relative z-10 rounded-2xl shadow-2xl w-full h-auto border-4 border-white/20"
+                className="relative z-10 rounded-2xl shadow-2xl w-full h-auto border-4 border-white/50"
               />
             </div>
           </div>
@@ -100,7 +100,7 @@ const Sobre = () => {
             <h2 className="font-serif text-4xl font-bold mb-8 text-center text-foreground">
               Minha História
             </h2>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-primary/10">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-muted">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
                 Minha jornada na nutrição começou com uma paixão pessoal pela alimentação 
@@ -137,14 +137,14 @@ const Sobre = () => {
         className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(img/materno-infantil.png)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-muted/80"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold mb-12 text-center text-white">
+          <h2 className="font-serif text-4xl font-bold mb-12 text-center text-foreground">
             Formação e Experiência
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {qualifications.map((qual, index) => (
-              <Card key={index} className="h-full bg-white/95 backdrop-blur-sm border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Card key={index} className="h-full bg-white/98 backdrop-blur-sm border-white/50 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 bg-primary/10 rounded-full">
@@ -183,7 +183,7 @@ const Sobre = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-primary/10 hover:shadow-xl transition-all duration-300">
+              <div key={index} className="text-center bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-muted hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="w-8 h-8 bg-primary rounded-full"></div>
                 </div>
@@ -204,20 +204,20 @@ const Sobre = () => {
         className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(img/profile-photo-4.png)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-muted/90"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl font-bold mb-6 text-white">
+          <h2 className="font-serif text-4xl font-bold mb-6 text-foreground">
             Vamos Construir Juntas Sua Jornada de Saúde?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-muted-foreground">
             Estou aqui para te acompanhar em cada passo rumo a uma alimentação 
             mais saudável e equilibrada.
           </p>
           <Button 
             asChild 
             size="lg" 
-            variant="secondary"
-            className="text-lg px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-xl"
+            variant="default"
+            className="text-lg px-8 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
           >
             <a href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.">
               Conversar no WhatsApp

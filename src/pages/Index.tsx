@@ -109,7 +109,7 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src={'/img/profile-photo-1.jpeg'}
+                src={'/img/profile-photo-5.jpeg'}
                 alt="Juliana Rabelo - Nutricionista"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

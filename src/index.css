@@ -8,109 +8,109 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 43 31% 97%;
-    --foreground: 39 12% 15%;
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 39 12% 15%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 39 12% 15%;
+    --popover-foreground: 210 11% 15%;
 
-    /* Tons verdes suaves para nutrição */
-    --primary: 120 32% 45%;
+    /* Tons muito claros e limpos - sem verde */
+    --primary: 210 11% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 120 25% 65%;
+    --primary-light: 210 11% 45%;
 
-    --secondary: 43 31% 90%;
-    --secondary-foreground: 39 12% 15%;
+    --secondary: 210 7% 90%;
+    --secondary-foreground: 210 11% 25%;
 
-    --muted: 43 31% 94%;
-    --muted-foreground: 39 12% 45%;
+    --muted: 210 7% 96%;
+    --muted-foreground: 210 11% 40%;
 
-    --accent: 120 25% 85%;
-    --accent-foreground: 39 12% 15%;
+    --accent: 210 7% 93%;
+    --accent-foreground: 210 11% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 43 23% 85%;
-    --input: 43 23% 85%;
-    --ring: 120 32% 45%;
+    --border: 210 7% 85%;
+    --input: 210 7% 90%;
+    --ring: 210 11% 25%;
 
-    /* Paleta de tons quentes */
-    --warm-50: 43 100% 97%;
-    --warm-100: 43 87% 94%;
-    --warm-200: 43 83% 88%;
-    --warm-300: 43 77% 79%;
-    --warm-400: 43 69% 68%;
-    --warm-500: 43 61% 55%;
-    --warm-600: 43 55% 45%;
-    --warm-700: 43 51% 37%;
-    --warm-800: 43 47% 31%;
-    --warm-900: 43 43% 25%;
+    /* Paleta de tons neutros muito claros */
+    --warm-50: 0 0% 99%;
+    --warm-100: 210 7% 97%;
+    --warm-200: 210 7% 94%;
+    --warm-300: 210 7% 88%;
+    --warm-400: 210 7% 80%;
+    --warm-500: 210 7% 70%;
+    --warm-600: 210 7% 60%;
+    --warm-700: 210 7% 50%;
+    --warm-800: 210 7% 40%;
+    --warm-900: 210 7% 30%;
 
     --radius: 1rem;
 
-    --sidebar-background: 43 31% 97%;
-    --sidebar-foreground: 39 12% 25%;
-    --sidebar-primary: 120 32% 45%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 11% 15%;
+    --sidebar-primary: 210 11% 25%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 43 31% 90%;
-    --sidebar-accent-foreground: 39 12% 15%;
-    --sidebar-border: 43 23% 85%;
-    --sidebar-ring: 120 32% 45%;
+    --sidebar-accent: 210 7% 93%;
+    --sidebar-accent-foreground: 210 11% 15%;
+    --sidebar-border: 210 7% 85%;
+    --sidebar-ring: 210 11% 25%;
   }
 
   .dark {
-    --background: 39 12% 8%;
-    --foreground: 43 31% 95%;
+    --background: 210 11% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 39 12% 10%;
-    --card-foreground: 43 31% 95%;
+    --card: 210 11% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 39 12% 10%;
-    --popover-foreground: 43 31% 95%;
+    --popover: 210 11% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 120 25% 65%;
-    --primary-foreground: 39 12% 8%;
-    --primary-light: 120 32% 75%;
+    --primary: 210 11% 70%;
+    --primary-foreground: 210 11% 8%;
+    --primary-light: 210 11% 80%;
 
-    --secondary: 39 12% 15%;
-    --secondary-foreground: 43 31% 95%;
+    --secondary: 210 11% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 39 12% 15%;
-    --muted-foreground: 43 23% 65%;
+    --muted: 210 11% 15%;
+    --muted-foreground: 210 7% 65%;
 
-    --accent: 120 15% 25%;
-    --accent-foreground: 43 31% 95%;
+    --accent: 210 11% 20%;
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 39 12% 20%;
-    --input: 39 12% 20%;
-    --ring: 120 25% 65%;
+    --border: 210 11% 20%;
+    --input: 210 11% 20%;
+    --ring: 210 11% 70%;
 
-    --warm-50: 39 43% 8%;
-    --warm-100: 39 47% 12%;
-    --warm-200: 39 51% 16%;
-    --warm-300: 39 55% 22%;
-    --warm-400: 39 61% 30%;
-    --warm-500: 39 69% 40%;
-    --warm-600: 39 77% 52%;
-    --warm-700: 39 83% 65%;
-    --warm-800: 39 87% 78%;
-    --warm-900: 39 100% 90%;
+    --warm-50: 210 11% 8%;
+    --warm-100: 210 11% 12%;
+    --warm-200: 210 11% 16%;
+    --warm-300: 210 11% 22%;
+    --warm-400: 210 11% 30%;
+    --warm-500: 210 11% 40%;
+    --warm-600: 210 11% 52%;
+    --warm-700: 210 11% 65%;
+    --warm-800: 210 11% 78%;
+    --warm-900: 210 11% 90%;
 
-    --sidebar-background: 39 12% 8%;
-    --sidebar-foreground: 43 31% 85%;
-    --sidebar-primary: 120 25% 65%;
-    --sidebar-primary-foreground: 39 12% 8%;
-    --sidebar-accent: 39 12% 15%;
-    --sidebar-accent-foreground: 43 31% 95%;
-    --sidebar-border: 39 12% 20%;
-    --sidebar-ring: 120 25% 65%;
+    --sidebar-background: 210 11% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 210 11% 70%;
+    --sidebar-primary-foreground: 210 11% 8%;
+    --sidebar-accent: 210 11% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 11% 20%;
+    --sidebar-ring: 210 11% 70%;
   }
 }
 

@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'Juliana Rabelo', href: '/sobre' },
     { name: 'Blog', href: '/blog' },
     // { name: 'Pacotes', href: '/pacotes' },
-    { name: 'Parcerias', href: '/parcerias' },
+    // { name: 'Parcerias', href: '/parcerias' },
     { name: 'Contato', href: '/contato' },
   ];
 

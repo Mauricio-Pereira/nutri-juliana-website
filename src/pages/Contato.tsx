@@ -159,7 +159,7 @@ const Contato = () => {
                 Horários de Atendimento
               </h2>
               <p className="text-xl text-muted-foreground">
-                Consultas online disponíveis atualmente pela Clínica Seven
+                Consultas online disponíveis atualmente pela <a href="https://www.clinicaseven.com.br" className="text-primary hover:underline">Clínica Seven</a>
               </p>
             </div>
 

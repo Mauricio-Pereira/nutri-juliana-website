@@ -50,12 +50,12 @@ const Footer = () => {
               >
                 Sobre Juliana
               </Link>
-              <Link
+              {/* <Link
                 to="/pacotes"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
                 Pacotes
-              </Link>
+              </Link> */}
               <Link
                 to="/blog"
                 className="block text-muted-foreground hover:text-primary transition-colors"
