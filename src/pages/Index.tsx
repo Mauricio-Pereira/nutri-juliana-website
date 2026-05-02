@@ -47,29 +47,46 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section 
-        className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-shadow-lg">
-            Juliana Rabelo
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-shadow font-light">
-            Nutrindo futuras gerações com amor 💕
-          </p>
-          <Button 
-            asChild 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 rounded-full"
-          >
-            <a href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
-              Agendar Consulta
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/45 to-primary/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+          <div className="max-w-2xl text-white">
+            <p className="mb-5 inline-flex rounded-lg border border-white/30 bg-white/15 px-4 py-2 text-sm font-medium uppercase tracking-[0.18em] backdrop-blur-sm">
+              Nutrição clínica e materno-infantil
+            </p>
+            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight text-shadow-lg">
+              Juliana Rabelo
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-xl text-white/90 text-shadow font-light leading-relaxed">
+              Atendimento nutricional para saúde da mulher, gestação, vegetarianismo e emagrecimento saudável.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6 rounded-lg"
+              >
+                <a href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
+                  Agendar Consulta
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white/50 bg-white/10 text-white hover:bg-white hover:text-primary text-base px-8 py-6 rounded-lg backdrop-blur-sm"
+              >
+                <a href="/sobre">
+                  Conhecer a Juliana
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -112,7 +129,7 @@ const Index = () => {
               <img
                 src={'/img/profile-photo-5.jpeg'}
                 alt="Juliana Rabelo - Nutricionista"
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-lg shadow-2xl w-full h-auto"
               />
             </div>
           </div>
@@ -179,7 +196,7 @@ const Index = () => {
             asChild 
             size="lg" 
             variant="secondary"
-            className="text-lg px-8 py-6 rounded-full"
+            className="text-lg px-8 py-6 rounded-lg"
           >
             <a href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
               Agendar Consulta pelo WhatsApp

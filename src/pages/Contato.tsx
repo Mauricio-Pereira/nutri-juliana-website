@@ -133,7 +133,7 @@ const Contato = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6 rounded-full"
+                  className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6 rounded-lg"
                 >
                   <a 
                     href={contact.whatsappHref}
@@ -272,7 +272,7 @@ const Contato = () => {
             asChild
             size="lg"
             variant="secondary"
-            className="text-lg px-8 py-6 rounded-full"
+            className="text-lg px-8 py-6 rounded-lg"
           >
             <a href={contact.whatsappHref}>
               Agendar Minha Consulta

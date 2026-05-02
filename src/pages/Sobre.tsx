@@ -79,11 +79,11 @@ const Sobre = () => {
               </Button>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent rounded-lg"></div>
               <img
                 src={'/img/profile-photo-6.jpeg'}
                 alt="Juliana Rabelo - Nutricionista"
-                className="relative z-10 rounded-2xl shadow-2xl w-full h-auto border-4 border-white/50"
+                className="relative z-10 rounded-lg shadow-2xl w-full h-auto border-4 border-white/50"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ const Sobre = () => {
             <h2 className="font-serif text-4xl font-bold mb-8 text-center text-foreground">
               Minha História
             </h2>
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-muted">
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-8 shadow-xl border border-muted">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
                 Minha jornada na nutrição começou com uma paixão pessoal pela alimentação 
@@ -184,7 +184,7 @@ const Sobre = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-muted hover:shadow-xl transition-all duration-300">
+              <div key={index} className="text-center bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-lg border border-muted hover:shadow-xl transition-all duration-300">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="w-8 h-8 bg-primary rounded-full"></div>
                 </div>
@@ -218,7 +218,7 @@ const Sobre = () => {
             asChild 
             size="lg" 
             variant="default"
-            className="text-lg px-8 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+            className="text-lg px-8 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
           >
             <a href={contact.whatsappHref}>
               Conversar no WhatsApp

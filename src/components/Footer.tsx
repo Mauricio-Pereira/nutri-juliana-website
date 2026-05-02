@@ -81,7 +81,7 @@ const Footer = () => {
                 href={contact.instagramHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+                className="p-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -89,13 +89,13 @@ const Footer = () => {
                 href={contact.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+                className="p-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-5 w-5" />
               </a>
               <a
                 href={contact.emailHref}
-                className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+                className="p-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
               >
                 <Mail className="h-5 w-5" />
               </a>
