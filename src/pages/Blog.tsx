@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import { contact } from '@/lib/contact';
 
 const Blog = () => {
   return (
@@ -13,7 +14,7 @@ const Blog = () => {
             saúde da mulher e alimentação saudável.
           </p>
           <p className="text-muted-foreground">
-            Enquanto isso, siga nosso Instagram @julianarabelonutri para 
+            Enquanto isso, siga nosso Instagram {contact.instagramHandle} para
             conteúdos diários!
           </p>
         </div>

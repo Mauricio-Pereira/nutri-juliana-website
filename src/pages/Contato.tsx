@@ -9,38 +9,38 @@ import {
   Clock,
   ArrowRight,
 } from "lucide-react";
-import consultationImage from "";
+import { contact } from "@/lib/contact";
 
 const Contato = () => {
   const contactInfo = [
-    // {
-    //   icon: Phone,
-    //   title: 'Telefone/WhatsApp',
-    //   info: '+55 12 99784-8513',
-    //   link: 'https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.',
-    //   description: 'Atendimento via WhatsApp',
-    // },
+    {
+      icon: Phone,
+      title: "Telefone/WhatsApp",
+      info: contact.phoneDisplay,
+      link: contact.whatsappHref,
+      description: "Atendimento via WhatsApp",
+    },
     {
       icon: Instagram,
       title: "Instagram",
-      info: "@julianarabelonutri",
-      link: "https://www.instagram.com/julianarabelonutri/",
+      info: contact.instagramHandle,
+      link: contact.instagramHref,
       description: "Dicas e conteúdos semanais",
     },
     {
       icon: Mail,
       title: "E-mail",
-      info: "nutricionistajulianarabelo@gmail.com",
-      link: "mailto:nutricionistajulianarabelo@gmail.com",
+      info: contact.email,
+      link: contact.emailHref,
       description: "Para dúvidas gerais",
     },
-    // {
-    //   icon: MapPin,
-    //   title: 'Localização',
-    //   info: 'Atendimento Presencial e Online',
-    //   link: '#',
-    //   description: 'Flexibilidade para você',
-    // },
+    {
+      icon: MapPin,
+      title: "Atendimento",
+      info: "Consultas online",
+      link: "#",
+      description: "Flexibilidade para você",
+    },
   ];
 
   const schedule = [
@@ -79,7 +79,7 @@ const Contato = () => {
               Escolha a forma mais conveniente para entrar em contato
             </p>
           </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {contactInfo.map((contact, index) => (
                 <Card
                   key={index}
@@ -95,7 +95,7 @@ const Contato = () => {
                     <p className="text-muted-foreground mb-2">
                       {contact.description}
                     </p>
-                    <p className="font-medium text-foreground mb-4 flex-grow">
+                    <p className="font-medium text-foreground mb-4 flex-grow break-words [overflow-wrap:anywhere]">
                       {contact.info}
                     </p>
                     {contact.link !== "#" && (
@@ -120,7 +120,7 @@ const Contato = () => {
             </div>
 
             {/* WhatsApp Destaque */}
-            {/* <div className="text-center">
+            <div className="text-center">
             <Card className="max-w-2xl mx-auto bg-primary/5 border-primary/20">
               <CardContent className="p-8">
                 <h3 className="font-serif text-2xl font-bold mb-4 text-foreground">
@@ -136,7 +136,7 @@ const Contato = () => {
                   className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6 rounded-full"
                 >
                   <a 
-                    href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta."
+                    href={contact.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -146,7 +146,7 @@ const Contato = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div> */}
+          </div>
           </div>
       </section>
 
@@ -159,7 +159,7 @@ const Contato = () => {
                 Horários de Atendimento
               </h2>
               <p className="text-xl text-muted-foreground">
-                Consultas online disponíveis atualmente pela <a href="https://www.clinicaseven.com.br" className="text-primary hover:underline">Clínica Seven</a>
+                Consultas online disponíveis atualmente com agendamento direto pelo WhatsApp.
               </p>
             </div>
 
@@ -196,12 +196,6 @@ const Contato = () => {
                     </h3>
                   </div>
                   <div className="space-y-4">
-                    {/* <div>
-                      <h4 className="font-medium text-foreground mb-1">Presencial</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Atendimento no consultório com toda infraestrutura necessária
-                      </p>
-                    </div> */}
                     <div>
                       <h4 className="font-medium text-foreground mb-1">
                         Online
@@ -266,14 +260,13 @@ const Contato = () => {
       </section>
 
       {/* Call to Action Final */}
-      {/* <section className="py-8 bg-primary text-primary-foreground">
+      <section className="py-8 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Pronta para Começar?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Não perca mais tempo. Sua jornada para uma vida mais saudável pode
-            começar hoje mesmo!
+            Sua jornada para uma vida mais saudável pode começar hoje mesmo.
           </p>
           <Button
             asChild
@@ -281,13 +274,13 @@ const Contato = () => {
             variant="secondary"
             className="text-lg px-8 py-6 rounded-full"
           >
-            <a href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.">
+            <a href={contact.whatsappHref}>
               Agendar Minha Consulta
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>
-      </section> */}
+      </section>
     </Layout>
   );
 };

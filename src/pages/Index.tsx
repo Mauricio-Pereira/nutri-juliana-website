@@ -1,8 +1,9 @@
-import Layout from '@/components/Layout';
+﻿import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Baby, Leaf, Scale, ArrowRight } from 'lucide-react';
-import heroBackground from '@/assets/background-home.png';
+import heroBackground from '@/assets/background-home.jpg';
+import { contact } from '@/lib/contact';
 
 const Index = () => {
   const specialties = [
@@ -59,16 +60,16 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 text-shadow font-light">
             Nutrindo futuras gerações com amor 💕
           </p>
-          {/* <Button 
+          <Button 
             asChild 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 rounded-full"
           >
-            <a href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.">
+            <a href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
               Agendar Consulta
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
-          </Button> */}
+          </Button>
         </div>
       </section>
 
@@ -134,29 +135,29 @@ const Index = () => {
           {specialties.map((specialty) => (
             <div 
               key={specialty.id}
-              className="group relative w-full h-96 lg:h-[29rem] text-white flex items-center justify-center text-center overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+              className="group relative w-full h-96 lg:h-[29rem] text-white flex items-center justify-center text-center overflow-hidden cursor-pointer transition-all duration-700 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)]"
             >
               {/* Background Image com overlay */}
               <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:scale-105 z-0"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] group-hover:scale-105 z-0"
           style={{ backgroundImage: `url(${specialty.bgImage})` }}
               />
               
               {/* Overlay escuro */}
-              <div className="absolute inset-0 bg-black/50 z-0 transition-colors duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]" />
+              <div className="absolute inset-0 bg-black/50 z-0 transition-colors duration-700 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)]" />
               
               {/* Overlay adicional que muda no hover */}
-              <div className="absolute inset-0 bg-transparent group-hover:bg-black/40 transition-colors duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] z-0" />
+              <div className="absolute inset-0 bg-transparent group-hover:bg-black/40 transition-colors duration-700 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] z-0" />
               
               {/* Conteúdo */}
-              <div className="relative z-10 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:mt-[40%] group-hover:-translate-y-20">
+              <div className="relative z-10 transition-all duration-700 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] group-hover:mt-[40%] group-hover:-translate-y-20">
           {/* Título sempre visível */}
           <h3 className="font-serif text-2xl font-bold mb-4 z-10" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             {specialty.title}
           </h3>
           
           {/* Descrição que aparece no hover */}
-          <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-100 group-hover:max-h-96 text-center mx-5 text-sm lg:text-base leading-relaxed">
+          <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-700 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] group-hover:opacity-100 group-hover:max-h-96 text-center mx-5 text-sm lg:text-base leading-relaxed">
             {specialty.fullDescription}
                 </p>
               </div>
@@ -166,7 +167,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      {/* <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">
             Pronta para Transformar sua Alimentação?
@@ -180,13 +181,13 @@ const Index = () => {
             variant="secondary"
             className="text-lg px-8 py-6 rounded-full"
           >
-            <a href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.">
+            <a href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
               Agendar Consulta pelo WhatsApp
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>
-      </section> */}
+      </section>
     </Layout>
   );
 };

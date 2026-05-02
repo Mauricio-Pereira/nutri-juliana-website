@@ -1,7 +1,10 @@
-import { Heart, Instagram, Mail, Phone } from 'lucide-react';
+import { Instagram, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { contact } from '@/lib/contact';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-muted/80 border-t border-border shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -13,27 +16,27 @@ const Footer = () => {
             </h3>
             <div className="space-y-3">
               <a
-                href="tel:+5512997848513"
+                href={contact.phoneHref}
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span>+55 12 99784-8513</span>
+                <span>{contact.phoneDisplay}</span>
               </a>
               <a
-                href="mailto:nutricionistajulianarabelo@gmail.com"
+                href={contact.emailHref}
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                <span>nutricionistajulianarabelo@gmail.com</span>
+                <span className="break-words [overflow-wrap:anywhere]">{contact.email}</span>
               </a>
               <a
-                href="https://www.instagram.com/julianarabelonutri/"
+                href={contact.instagramHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Instagram className="h-4 w-4" />
-                <span>@julianarabelonutri</span>
+                <span>{contact.instagramHandle}</span>
               </a>
             </div>
           </div>
@@ -50,12 +53,6 @@ const Footer = () => {
               >
                 Sobre Juliana
               </Link>
-              {/* <Link
-                to="/pacotes"
-                className="block text-muted-foreground hover:text-primary transition-colors"
-              >
-                Pacotes
-              </Link> */}
               <Link
                 to="/blog"
                 className="block text-muted-foreground hover:text-primary transition-colors"
@@ -81,7 +78,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/julianarabelonutri/"
+                href={contact.instagramHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
@@ -89,7 +86,7 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta."
+                href={contact.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
@@ -97,7 +94,7 @@ const Footer = () => {
                 <Phone className="h-5 w-5" />
               </a>
               <a
-                href="mailto:nutricionistajulianarabelo@gmail.com"
+                href={contact.emailHref}
                 className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
               >
                 <Mail className="h-5 w-5" />
@@ -106,12 +103,20 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground flex items-center justify-center space-x-1">
-            <span>© 2025 Juliana Rabelo. Feito com</span>
-            <Heart className="h-4 w-4 text-primary fill-current" />
-            <span>para sua saúde.</span>
+          <p className="text-sm text-muted-foreground">
+            ©Copyright Juliana Rabelo - {currentYear}. Todos os direitos reservados.
+          </p>
+          <p className="mt-2 text-sm font-semibold text-foreground">
+            Desenvolvido por{" "}
+            <a
+              href="https://mp-portfolio.mauricio-pvieira1.workers.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Mauricio Pereira
+            </a>
           </p>
         </div>
       </div>

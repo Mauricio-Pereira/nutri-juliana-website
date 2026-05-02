@@ -2,7 +2,8 @@ import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Award, Users, Heart, ArrowRight } from 'lucide-react';
-import julianaProfile from '@/assets/juliana-profile.jpg';
+import { contact } from '@/lib/contact';
+import heroBackground from '@/assets/background-home.jpg';
 
 const Sobre = () => {
   const qualifications = [
@@ -14,9 +15,9 @@ const Sobre = () => {
     },
     {
       icon: Award,
-      title: 'Nutricionista na Clinica Seven',
-      description: 'Nutricionista responsável por atendimentos clínicos com foco em emagrecimento e saúde da mulher',
-      year: '2024-Atualmente',
+      title: 'Atuação Clínica',
+      description: 'Atendimentos clínicos com foco em emagrecimento, saúde da mulher e cuidado individualizado',
+      year: '2024',
     },
     {
       icon: Users,
@@ -56,7 +57,7 @@ const Sobre = () => {
       {/* Hero Section */}
       <section 
         className="relative py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(img/background-home.png)` }}
+        style={{ backgroundImage: `url(${heroBackground})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-white/85"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,12 +71,12 @@ const Sobre = () => {
                 alimentação consciente e saudável, especializada no cuidado integral 
                 da saúde da mulher e da família.
               </p>
-              {/* <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
                 <a href="/contato">
                   Agendar Consulta
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
-              </Button> */}
+              </Button>
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent rounded-2xl"></div>
@@ -200,7 +201,7 @@ const Sobre = () => {
       </section>
 
       {/* Call to Action */}
-      {/* <section 
+      <section 
         className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(img/profile-photo-4.png)` }}
       >
@@ -219,13 +220,13 @@ const Sobre = () => {
             variant="default"
             className="text-lg px-8 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
           >
-            <a href="https://api.whatsapp.com/send?phone=5512997848513&text=Olá,%20gostaria%20de%20agendar%20minha%20consulta.">
+            <a href={contact.whatsappHref}>
               Conversar no WhatsApp
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>
         </div>
-      </section> */}
+      </section>
     </Layout>
   );
 };
