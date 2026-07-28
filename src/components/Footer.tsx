@@ -54,10 +54,10 @@ const Footer = () => {
                 Sobre Juliana
               </Link>
               <Link
-                to="/blog"
+                to="/acompanhamento"
                 className="block text-muted-foreground hover:text-primary transition-colors"
               >
-                Blog
+                Acompanhamento
               </Link>
               <Link
                 to="/contato"
@@ -104,6 +104,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="mb-2 text-sm font-medium text-foreground">
+            Nutricionista Juliana Rabelo • CRN-3 80627
+          </p>
           <p className="text-sm text-muted-foreground">
             ©Copyright Juliana Rabelo - {currentYear}. Todos os direitos reservados.
           </p>

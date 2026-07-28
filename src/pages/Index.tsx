@@ -1,8 +1,8 @@
 ﻿import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Baby, Leaf, Scale, ArrowRight } from 'lucide-react';
-import heroBackground from '@/assets/background-home.jpg';
+import { Heart, Baby, Leaf, Scale, ArrowRight, CalendarDays, MessagesSquare, Sparkles } from 'lucide-react';
+import heroBackground from '@/assets/background-home.webp';
 import { contact } from '@/lib/contact';
 
 const Index = () => {
@@ -14,7 +14,7 @@ const Index = () => {
       description: 'Cuidar da saúde da mulher envolve compreender as nuances e particularidades de cada fase da vida.',
       fullDescription: 'Foco especialmente em áreas como fertilidade, saúde reprodutiva, ciclos menstruais, endometriose e síndrome do ovário policístico (SOP). Se você está tentando engravidar, lidando com desafios hormonais ou simplesmente buscando um equilíbrio menstrual, estou aqui para ajudar.',
       color: 'text-pink-600',
-      bgImage: '/img/saude-da-mulher.png',
+      bgImage: '/img/saude-da-mulher.webp',
     },
     {
       id: 'materno-infantil',
@@ -23,7 +23,7 @@ const Index = () => {
       description: 'A nutrição durante a gestação e a infância é crucial para um desenvolvimento saudável.',
       fullDescription: 'Acompanho desde a pré-concepção, gestação, pós-parto e amamentação, oferecendo orientações que promovem uma alimentação balanceada, com foco em nutrientes essenciais. Para os pequenos, trabalho na introdução alimentar e na formação de hábitos saudáveis, respeitando cada fase de desenvolvimento e necessidades individuais.',
       color: 'text-blue-600',
-      bgImage: '/img/materno-infantil.png',
+      bgImage: '/img/materno-infantil.webp',
     },
     {
       id: 'vegetarianismo',
@@ -32,7 +32,7 @@ const Index = () => {
       description: 'Seja por questões éticas, ambientais ou de saúde, a alimentação vegetariana é uma escolha cada vez mais comum.',
       fullDescription: 'Ofereço orientação para quem deseja adotar ou já segue uma dieta vegetariana, garantindo que todos os nutrientes essenciais sejam incluídos na alimentação. Exploramos juntos opções saborosas e nutritivas, mostrando que é possível ter uma alimentação completa e cheia de sabores.',
       color: 'text-green-600',
-      bgImage: '/img/vegetarianismo.png',
+      bgImage: '/img/vegetarianismo.webp',
     },
     {
       id: 'emagrecimento',
@@ -41,7 +41,7 @@ const Index = () => {
       description: 'O processo de emagrecimento vai além de perder peso. É sobre conquistar saúde, bem-estar e autoconfiança.',
       fullDescription: 'Trabalho com planos alimentares individualizados, que respeitam suas preferências e rotina, sem restrições extremas. Meu objetivo é promover uma relação saudável com a comida, ajudando a entender sinais de fome e saciedade, e incentivando a prática de hábitos sustentáveis.',
       color: 'text-purple-600',
-      bgImage: '/img/emagrecimento.png',
+      bgImage: '/img/emagrecimento.webp',
     },
   ];
 
@@ -127,8 +127,12 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2">
               <img
-                src={'/img/profile-photo-5.jpeg'}
+                src="/img/profile-photo-5.webp"
                 alt="Juliana Rabelo - Nutricionista"
+                width="1200"
+                height="1600"
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
             </div>
@@ -183,6 +187,70 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Acompanhamento Nutricional */}
+      <section className="relative overflow-hidden bg-background py-20">
+        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent/60 blur-3xl" />
+        <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Cuidado que continua
+              </p>
+              <h2 className="font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl">
+                Um acompanhamento para cada momento da sua jornada
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                Além da consulta individual, você pode contar com encontros periódicos para ajustar estratégias, acompanhar sua evolução e transformar orientações em hábitos possíveis para a sua rotina.
+              </p>
+              <Button asChild size="lg" className="mt-8 px-7 py-6 text-base">
+                <a href="/acompanhamento">
+                  Conhecer os formatos
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Card className="border-primary/20 bg-card/90 shadow-lg sm:translate-y-6">
+                <CardContent className="p-7">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                    <CalendarDays className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-foreground">
+                    Encontros no seu ritmo
+                  </h3>
+                  <p className="mt-3 leading-relaxed text-muted-foreground">
+                    Opções pontuais, mensais ou quinzenais, de acordo com seus objetivos e com a fase do cuidado.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <div className="space-y-4">
+                <Card className="border-primary/20 bg-primary text-primary-foreground shadow-lg">
+                  <CardContent className="p-7">
+                    <Sparkles className="mb-4 h-7 w-7" />
+                    <h3 className="font-serif text-xl font-semibold">Estratégia personalizada</h3>
+                    <p className="mt-2 text-sm leading-relaxed opacity-90">
+                      Condutas e ajustes construídos a partir da sua realidade.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-primary/20 bg-card/90 shadow-lg">
+                  <CardContent className="p-7">
+                    <MessagesSquare className="mb-4 h-7 w-7 text-primary" />
+                    <h3 className="font-serif text-xl font-semibold text-foreground">Suporte no processo</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      Um canal para dúvidas entre os encontros durante o acompanhamento.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -196,10 +264,10 @@ const Index = () => {
             asChild 
             size="lg" 
             variant="secondary"
-            className="text-lg px-8 py-6 rounded-lg"
+            className="px-4 py-6 text-base sm:px-8 sm:text-lg rounded-lg"
           >
             <a href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
-              Agendar Consulta pelo WhatsApp
+              Agendar pelo WhatsApp
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </Button>

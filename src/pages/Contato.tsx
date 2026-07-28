@@ -53,7 +53,7 @@ const Contato = () => {
       {/* Hero Section */}
       <section
         className="relative py-32 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(img/consultation.jpg)` }}
+        style={{ backgroundImage: `url(/img/consultation.webp)` }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">

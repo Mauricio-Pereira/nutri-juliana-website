@@ -11,7 +11,7 @@ const Header = () => {
   const navigation = [
     { name: 'Início', href: '/' },
     { name: 'Juliana Rabelo', href: '/sobre' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Acompanhamento', href: '/acompanhamento' },
     { name: 'Contato', href: '/contato' },
   ];
 
@@ -33,17 +33,23 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full h-22 z-50 bg-muted/[80] backdrop-blur-sm border-b border-border shadow-sm flex items-center">
-      <div className="container mx-8 px-0 sm:px-0 lg:px-0">
-        <div className="flex justify-between items-center h-16 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 w-full items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr]">
           {/* Logo - Sempre à esquerda */}
           <div className="flex-shrink-0 ml-0 pl-0">
             <Link to="/" onClick={handleLinkClick} className="flex items-center">
-              <img src={'/img/logo-3cores-sem-fundo.png'} alt="Juliana Rabelo" className="h-20" />
+              <img
+                src="/img/logo-3cores-sem-fundo.webp"
+                alt="Juliana Rabelo"
+                width="900"
+                height="249"
+                className="h-20 w-auto"
+              />
             </Link>
           </div>
 
           {/* Desktop Navigation - Centralizada */}
-          <nav className="hidden md:flex flex-1 justify-center">
+          <nav className="hidden md:flex md:justify-self-center">
             <div className="flex space-x-8">
               {navigation.map((item) => (
                 <Link
@@ -63,7 +69,7 @@ const Header = () => {
           </nav>
 
           {/* WhatsApp Button - Sempre à direita */}
-          <div className="hidden md:block flex-shrink-0">
+          <div className="hidden md:block md:justify-self-end">
             <Button asChild className="bg-primary hover:bg-primary/90">
               <a
                 href={contact.whatsappHref}
@@ -78,7 +84,9 @@ const Header = () => {
           {/* Mobile menu button - À direita */}
           <div className="md:hidden flex-shrink-0">
             <button
-              className=""
+              type="button"
+              aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (

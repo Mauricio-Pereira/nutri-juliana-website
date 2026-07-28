@@ -3,7 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Award, Users, Heart, ArrowRight } from 'lucide-react';
 import { contact } from '@/lib/contact';
-import heroBackground from '@/assets/background-home.jpg';
+import heroBackground from '@/assets/background-home.webp';
 
 const Sobre = () => {
   const qualifications = [
@@ -66,10 +66,13 @@ const Sobre = () => {
               <h1 className="font-serif text-5xl font-bold mb-6 text-foreground">
                 Conheça Juliana Rabelo
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-4">
                 Uma profissional dedicada à transformação de vidas através da 
                 alimentação consciente e saudável, especializada no cuidado integral 
                 da saúde da mulher e da família.
+              </p>
+              <p className="mb-8 font-semibold text-primary">
+                Nutricionista • CRN-3 80627
               </p>
               <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
                 <a href="/contato">
@@ -81,8 +84,11 @@ const Sobre = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent rounded-lg"></div>
               <img
-                src={'/img/profile-photo-6.jpeg'}
+                src="/img/profile-photo-6.webp"
                 alt="Juliana Rabelo - Nutricionista"
+                width="1200"
+                height="1600"
+                decoding="async"
                 className="relative z-10 rounded-lg shadow-2xl w-full h-auto border-4 border-white/50"
               />
             </div>
@@ -93,7 +99,7 @@ const Sobre = () => {
       {/* Minha História */}
       <section 
         className="relative py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(img/saude-da-mulher.png)` }}
+        style={{ backgroundImage: `url(/img/saude-da-mulher.webp)` }}
       >
         <div className="absolute inset-0 bg-white/95"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,7 +142,7 @@ const Sobre = () => {
       {/* Qualificações */}
       <section 
         className="relative py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(img/materno-infantil.png)` }}
+        style={{ backgroundImage: `url(/img/materno-infantil.webp)` }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-muted/80"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,7 +181,7 @@ const Sobre = () => {
       {/* Valores */}
       <section 
         className="relative py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(img/vegetarianismo.png)` }}
+        style={{ backgroundImage: `url(/img/vegetarianismo.webp)` }}
       >
         <div className="absolute inset-0 bg-white/90"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,7 +209,7 @@ const Sobre = () => {
       {/* Call to Action */}
       <section 
         className="relative py-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(img/profile-photo-4.png)` }}
+        style={{ backgroundImage: `url(/img/profile-photo-4.webp)` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-muted/90"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
